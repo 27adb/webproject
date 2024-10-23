@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外思秦院</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- <span><img src="log.jpg" class="logg" alt="外思秦苑"></span> -->
+        <div class="logo">外思秦苑</div>
+        <nav>
+            <ul>
+                <li><a href="#" style="color: #e8491d;">Home</a></li>
+                <li><a href="neiye1.html">Book1</a></li>
+                <li><a href="#">Book2</a></li>
+                <li><a href="#">Book3</a></li>
+                <li><a href="#">Book4</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="carousel">
+            <div class="carousel-container">
+                <img src="7.jpg" class="slide" alt="Slide 1">
+                <img src="8.jpg" class="slide" alt="Slide 2">
+                <img src="9.jpg" class="slide" alt="Slide 3">
+                <img src="10.jpg" class="slide" alt="Slide 4">
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+    </section>
+
+
+    <section class="hero">
+        <div class="content">
+            <h2>网站介绍</h2><p class="p1">Introduction</span>
+            <p >
+                欢迎来到外思秦苑，一个让语言学习与思想启迪相遇的奇妙之地！
+
+这里，无论你是学生、教师还是终身学习者，都能发现适合自己的资源。文章、视频、互动模块，应有尽有，适合各种水平的学习者。
+
+加入我们，一起探索、学习、成长，用知识的力量连接文化，增进理解，共同进步。每一次点击，都是向更智慧的自己迈进的一步。让我们一起启程吧！
+            </p>
+            <p>Welcome to Waisi Qin Institute, a wonderful place where language learning meets ideological enlightenment!
+
+                Whether you're a student, teacher, or lifelong learner, you'll find the right resources here. Articles, videos, interactive modules, you name it, for learners of all levels.
+                
+                Join us as we explore, learn, grow, and connect cultures with the power of knowledge to increase understanding and progress together. Every click is a step toward a wiser self. Let's start together!</p>
+        </div>
+    </section>
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('scroll', function() {
+    const heroContent = document.querySelector('.hero .content');
+    const heroPosition = heroContent.getBoundingClientRect().top;
+
+    if (heroPosition < window.innerHeight) {
+        heroContent.parentElement.classList.add('visible');
+    } else {
+        heroContent.parentElement.classList.remove('visible'); // 当不在视口时移除类
+    }
+});
+
+    </script>
+</body>
+</html>

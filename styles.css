@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f3f3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+/* .logg{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+} */
+
+.logo {
+    font-family: "微软雅黑";
+    color: #333;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+nav ul li a:hover {
+    color: #e8491d;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: white;
+    margin-top: 50px;
+}
+
+.hero h2 {
+    /* color: #580f05; */
+    color: #333;
+    font-size: 48px;
+    font-family: "微软雅黑";
+   
+}
+.hero .p1{
+    font-size: 16;
+    font-family: '微软雅黑';
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.hero p {
+    color: #333;
+    font-family: "微软雅黑";
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    width: 451px;
+    height: 677px;
+    object-fit: cover;
+}
+.hero .content {
+    opacity: 0; /* 初始透明度为0 */
+    transition: opacity 1s ease; /* 过渡效果 */
+    text-align: center;
+}
+.hero.visible .content {
+    opacity: 1; /* 变为完全不透明 */
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    perspective: 1200px; /* 用于创建3D效果 */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 如果需要垂直居中 */
+    height: 400px; /* 可以根据需要设置高度 */
+    margin: 150px;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* 保持子元素的3D效果 */
+    transition: transform 0.5s ease-in-out; /* 过渡动画效果 */
+}
+
+.slide {
+    width: 300px;
+    height: 380px;
+    border-radius: 20px; /* 圆角效果 */
+    margin: 0 20px;
+    transition: transform 0.5s ease; /* 平滑的变换过渡 */
+    object-fit: cover; /* 保持图片比例，覆盖整个容器 */
+    backface-visibility: hidden; /* 隐藏图片背面 */
+    transform-origin: center; /* 以中心点为基准进行旋转 */
+    position: absolute; /* 绝对定位使得图片可以重叠 */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* 按钮背景半透明 */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.active {
+    transform: translateZ(300px); /* 当前图片向前突出 */
+}
+
+.prev-slide {
+    transform: translateX(-320px) rotateY(30deg); /* 前一张图片左移并旋转 */
+}
+
+.next-slide {
+    transform: translateX(320px) rotateY(-30deg); /* 后一张图片右移并旋转 */
+}
+
+.hidden {
+    opacity: 0; /* 隐藏非显示的图片 */
+}
